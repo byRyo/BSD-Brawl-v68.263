@@ -1,18 +1,7 @@
 // @ts-nocheck
 const { Libg } = require("../../../../lib/Libg");
 
-const playEffectNative = new NativeFunction(Libg.offset(5452624, 5531864), "pointer", [
-  "pointer",
-  "int",
-  "int",
-  "int",
-  "pointer",
-  "pointer",
-  "int",
-  "char",
-  "char",
-  "char",
-]);
+const playEffectNative = new NativeFunction(Libg.offset(5452624, 5531864), "pointer", ["pointer", "int", "int", "int", "pointer", "pointer", "int", "char", "char", "char",]);
 
 class GameObjectManager {
   constructor(instance) {
