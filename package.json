@@ -1,0 +1,16 @@
+{
+  "name": "bsd-decompiled",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "format": "prettier --write .",
+    "build": "esbuild index.ts --bundle --outfile=dist/index.js --platform=neutral --format=iife",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  }
+}

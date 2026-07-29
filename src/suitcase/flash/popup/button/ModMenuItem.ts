@@ -1,0 +1,23 @@
+// @ts-nocheck
+const { GameButton } = require("../../../../laser/client/game/gui/GameButton");
+const { countryPopupListItemVtableAddr } = require("../ListContainerPopup");
+const { StringTable } = require("../../../../laser/client/game/text/StringTable");
+const { Localisation } = require("../../../localisation/Localisation");
+class ModMenuItem extends GameButton {
+  constructor(item) {
+    super();
+    this.name = "";
+    this.disabled = false;
+    this.instance.writePointer(countryPopupListItemVtableAddr);
+    const movieClip = StringTable.getMovieClip("sc/ui.sc", "country_item");
+    this.setMovieClip(movieClip.instance, true);
+    const textField = movieClip.getTextFieldByName("Text");
+    textField.colorTag = true;
+    textField.setTextScaleIfNecessary(Localisation.getString(item.name));
+    movieClip.gotoAndStopFrameIndex(1);
+    this.name = item.name ?? "";
+    this.disabled = item.disabled ?? false;
+    this.callback = item.callback;
+  }
+}
+module.exports = { ModMenuItem };
