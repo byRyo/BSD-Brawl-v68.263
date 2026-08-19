@@ -9,4 +9,4 @@ This repository contains the decompiled source code for **BSD Brawl v68.263**.
 ## Contact
 
 * **Telegram:** [@Ryo_2020](https://t.me/Ryo_2020)
-* **Discord:** `opilowarania_30854`
+* **Discord:** `heeddge`
